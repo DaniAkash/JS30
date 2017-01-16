@@ -7,14 +7,30 @@ body,html {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  height: 100%;
+  width: 100%;
 }
 
 .keys {
-  display: flex;
   flex: 1;
-  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  height: inherit;
+  width: inherit;
   align-items: center;
   justify-content: center;
+}
+
+.keys-row-1 {
+  display: flex;
+}
+
+.keys-row-2 {
+  display: flex;
+}
+
+.keys-row-3 {
+  display: flex;
 }
 
 .key {

@@ -6,21 +6,21 @@ function setDate() {
   const now = new Date();
 
   const seconds = now.getSeconds();
-  if(seconds === 0) secondHand.className = "hand-plain";
-  else secondHand.className = "hand";
+  if(seconds === 0) secondHand.className = "hand-plain second-hand";
+  else secondHand.className = "hand second-hand";
   const secondsDegrees = ((seconds / 60) * 360) + 90;
   secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
 
   const mins = now.getMinutes();
-  if(mins === 0) minsHand.className = "hand-plain";
-  else minsHand.className = "hand";
+  if(mins === 0) minsHand.className = "hand-plain minute-hand";
+  else minsHand.className = "hand minute-hand";
   const minsDegrees = ((mins / 60) * 360) + ((seconds/60)*6) + 90;
   minsHand.style.transform = `rotate(${minsDegrees}deg)`;
 
   const hour = now.getHours();
-  if(hour === 0) hourHand.className = "hand-plain";
-  else hourHand.className = "hand";
-  const hourDegrees = ((hour / 12) * 360) + ((mins/60)*30) + 90;
+  if(hour === 0) hourHand.className = "hand-plain hour-hand";
+  else hourHand.className = "hand hour-hand";
+  const hourDegrees = ((hour / 12) * 360) + 90;
   hourHand.style.transform = `rotate(${hourDegrees}deg)`;
 }
 

@@ -4,12 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "watch": "concurrently \"pug -w src --out dist\" \"babel -w --presets=es2015 src -d dist\" \"stylus -w src --out dist\"",
+    "build": "concurrently \"pug src --out dist\" \"babel --presets=es2015 src -d dist\" \"stylus src --out dist\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "babel-cli": "^6.24.0",
+    "babel-preset-es2015": "^6.24.0",
     "concurrently": "^3.4.0",
     "pug-cli": "^1.0.0-alpha6",
     "stylus": "^0.54.5"
